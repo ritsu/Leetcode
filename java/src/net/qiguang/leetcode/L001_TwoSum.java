@@ -1,4 +1,4 @@
-package net.qiguang.leetcode.L001_TwoSum;
+package net.qiguang.leetcode;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import java.util.HashMap;
  *     Because nums[0] + nums[1] = 2 + 7 = 9,
  *     return [0, 1].
  */
-public class Solution {
+public class L001_TwoSum {
     public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; i++) {

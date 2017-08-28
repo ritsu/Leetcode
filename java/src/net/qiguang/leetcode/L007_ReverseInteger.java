@@ -1,4 +1,4 @@
-package net.qiguang.leetcode.L007_ReverseInteger;
+package net.qiguang.leetcode;
 
 /**
  * Reverse digits of an integer.
@@ -10,7 +10,7 @@ package net.qiguang.leetcode.L007_ReverseInteger;
  * The input is assumed to be a 32-bit signed integer.
  * Your function should return 0 when the reversed integer overflows.
  */
-public class Solution {
+public class L007_ReverseInteger {
     public static int reverse(int x) {
         int r = 0;
         for (int d = x % 10; x != 0; x /= 10) {
