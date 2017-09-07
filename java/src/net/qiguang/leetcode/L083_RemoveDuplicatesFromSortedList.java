@@ -11,7 +11,8 @@ public class L083_RemoveDuplicatesFromSortedList {
     public static ListNode deleteDuplicates(ListNode head) {
         ListNode current = head;
         while (current != null) {
-            while (current.next != null && current.val == current.next.val) current.next = current.next.next;
+            while (current.next != null && current.val == current.next.val)
+                current.next = current.next.next;
             current = current.next;
         }
         return head;
@@ -34,7 +35,7 @@ public class L083_RemoveDuplicatesFromSortedList {
         }
         // Print list
         current = a;
-        while (current.next != null) {
+        while (current != null) {
             System.out.printf(current.val + " ");
             current = current.next;
         }
@@ -42,7 +43,7 @@ public class L083_RemoveDuplicatesFromSortedList {
         // Check
         deleteDuplicates(a);
         current = a;
-        while (current.next != null) {
+        while (current != null) {
             System.out.printf(current.val + " ");
             current = current.next;
         }
