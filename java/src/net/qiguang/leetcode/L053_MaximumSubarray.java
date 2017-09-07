@@ -35,7 +35,7 @@ public class L053_MaximumSubarray {
         if (lo >= hi) {
             return new int[] {nums[lo], nums[lo], nums[lo], nums[lo]};
         }
-        int mid = (lo + hi) / 2;
+        int mid = lo + (hi - lo) / 2;
         int[] mlo = maxSubArrayDivide(nums, lo, mid);
         int[] mhi = maxSubArrayDivide(nums, mid + 1, hi);
 

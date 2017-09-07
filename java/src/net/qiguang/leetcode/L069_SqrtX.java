@@ -26,7 +26,7 @@ public class L069_SqrtX {
     }
     public static int mySqrtBinary(int x, int lo, int hi) {
         count_binary++;
-        int mid = (lo + hi) / 2;
+        int mid = lo + (hi - lo) / 2;
         if (x / mid == mid) return mid;
         if (x / mid > mid) {
             if (x / (mid + 1) < (mid + 1)) return mid;

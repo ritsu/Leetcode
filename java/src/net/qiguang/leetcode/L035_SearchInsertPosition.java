@@ -17,8 +17,8 @@ public class L035_SearchInsertPosition {
         return searchInsert(nums, target, 0, nums.length - 1);
     }
     public static int searchInsert(int[] nums, int target, int lo, int hi) {
-        int mid = (lo + hi) / 2;
-        if (lo > hi) return target > nums[mid] ? mid + 1 : mid;    // Return where it should be inserted
+        int mid = lo + (hi - lo) / 2;
+        if (lo >= hi) return target > nums[mid] ? mid + 1 : mid;    // Return where it should be inserted
         if      (target > nums[mid]) return searchInsert(nums, target, mid + 1, hi);
         else if (target < nums[mid]) return searchInsert(nums, target, lo, mid - 1);
         else                         return mid;                   // Return where it was found
