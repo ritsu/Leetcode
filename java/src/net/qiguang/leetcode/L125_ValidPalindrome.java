@@ -32,7 +32,7 @@ public class L125_ValidPalindrome {
                 if (++left >= s.length()) return true;
                 a = s.charAt(left);
             }
-            while (right > 0 && !isAlphaNumeric(b)) {
+            while (!isAlphaNumeric(b)) {
                 if (--right < 0) return true;
                 b = s.charAt(right);
             }
