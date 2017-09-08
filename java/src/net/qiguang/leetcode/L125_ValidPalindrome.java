@@ -23,11 +23,12 @@ public class L125_ValidPalindrome {
         right = new StringBuilder(right).reverse().toString();
         return left.equals(right);
     }
-    // Fast solution (beats 97% of submissions)
+    // Fast solution (beats 98.77% of submissions)
     public static boolean isPalindromeFast(String s) {
         for (int left = 0, right = s.length() - 1; right > left; right--, left++) {
             char a = s.charAt(left);
             char b = s.charAt(right);
+            // Faster than Character.isLetterOrDigit()
             while (!isAlphaNumeric(a)) {
                 if (++left >= right) return true;
                 a = s.charAt(left);
@@ -36,6 +37,7 @@ public class L125_ValidPalindrome {
                 if (--right <= left) return true;
                 b = s.charAt(right);
             }
+            // Faster than Character.toLowerCase()
             if (a >= 'a' && a <= 'z') a -= 32;
             if (b >= 'a' && b <= 'z') b -= 32;
             if (a != b) return false;
