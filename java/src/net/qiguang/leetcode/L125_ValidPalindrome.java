@@ -29,11 +29,11 @@ public class L125_ValidPalindrome {
             char a = s.charAt(left);
             char b = s.charAt(right);
             while (!isAlphaNumeric(a)) {
-                if (++left >= s.length()) return true;
+                if (++left >= right) return true;
                 a = s.charAt(left);
             }
             while (!isAlphaNumeric(b)) {
-                if (--right < 0) return true;
+                if (--right <= left) return true;
                 b = s.charAt(right);
             }
             if (a >= 'a' && a <= 'z') a -= 32;
