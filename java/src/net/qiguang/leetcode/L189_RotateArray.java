@@ -18,7 +18,6 @@ public class L189_RotateArray {
     public static void rotate(int[] nums, int k) {
         k %= nums.length;
         if (k == 0) return;
-        int buf;
         int h = gcd(k, nums.length);
         int offset = 0;
         while (offset < h) {
@@ -26,7 +25,7 @@ public class L189_RotateArray {
             int i = nums.length - 1 - offset;
             while (--count > 0) {
                 int j = (i - k < 0) ? nums.length + (i - k) : i - k;
-                buf = nums[i];
+                int buf = nums[i];
                 nums[i] = nums[j];
                 nums[j] = buf;
                 i = j;
@@ -37,6 +36,25 @@ public class L189_RotateArray {
     public static int gcd(int a, int b) {
         if (b == 0) return a;
         return gcd(b, a % b);
+    }
+
+    // In-place with O(1) extra space
+    public static void rotateReverse(int[] nums, int k) {
+        k %= nums.length;
+        if (k == 0) return;
+        reverseArray(nums, 0, nums.length - 1);
+        reverseArray(nums, 0, k - 1);
+        reverseArray(nums, k, nums.length - 1);
+    }
+    // Reverser array elements in [left, right]
+    public static void reverseArray(int[] nums, int left, int right) {
+        while (left < right) {
+            int buf = nums[left];
+            nums[left] = nums[right];
+            nums[right] = buf;
+            left++;
+            right--;
+        }
     }
 
     // O(N) extra space, depends on k
@@ -71,7 +89,7 @@ public class L189_RotateArray {
             for (int i = 0; i < a.length; i++) {
                 a[i] = i;
             }
-            rotate(a, k);
+            rotateReverse(a, k);
             System.out.printf("%2d %s\n", k, Arrays.toString(a));
         }
     }
