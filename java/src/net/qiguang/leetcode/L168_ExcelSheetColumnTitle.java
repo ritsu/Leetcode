@@ -26,8 +26,8 @@ public class L168_ExcelSheetColumnTitle {
         return convertToTitleRecursive((n - 1) / 26) + (char) ('A' + (n - 1) % 26);
     }
     public static void main(String[] args) {
-        for (int i = 1; i < 1000; i++) {
-            System.out.println(convertToTitle(i));
+        for (int i = 1; i < 10000; i++) {
+            System.out.printf("%6d %6s\n", i, convertToTitle(i));
         }
     }
 }
