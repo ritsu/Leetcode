@@ -20,16 +20,10 @@ public class L198_HouseRobber {
      * -----------------------------------------------------
      *     1:  a[0]
      *     2:  max(a[0], a[1])
-     *     3:  a[0] + a[3]
-     *     4:  max(2) + a[4]
-     *         = max(a[0], a[1]) + a[4]
-     *     5:  max(3) + a[5]
-     *         = max(max(1) + a[3], max(2)) + a[5]
-     *     6:  max(4) + a[6]
-     *         = max(max(2) + a[4], max(3)) + a[6]
-     *         ...
-     *     n:  max(n-2) + a[n]
-     *         = max(max(n-4) + a[n-2], max(n-3)) + a[n]
+     *     3:  max(a[0] + a[3], a[2])
+     *     4:  max(max(2) + a[4], max(3))
+     *     5:  max(max(3) + a[5], max(4))
+     *     n:  max(n-2) + a[n], max(n-1))
      */
     public static int rob(int[] nums) {
         if (nums.length == 0) return 0;
