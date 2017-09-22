@@ -25,6 +25,7 @@ public class L198_HouseRobber {
      *     5:  max(max(3) + a[5], max(4))
      *     n:  max(max(n-2) + a[n], max(n-1))
      */
+    // 0 ms ~29%
     public static int rob(int[] nums) {
         if (nums.length == 0) return 0;
         if (nums.length == 1) return nums[0];

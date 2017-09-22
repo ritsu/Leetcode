@@ -10,20 +10,7 @@ import java.util.Random;
  * Return: 1 --> 2 --> 3 --> 4 --> 5
  */
 class L203_RemoveLinkedListElements {
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-        public String toString() {
-            ListNode current = this;
-            StringBuilder sb = new StringBuilder();
-            while (current != null) {
-                sb.append(current.val + " ");
-                current = current.next;
-            }
-            return sb.toString();
-        }
-    }
+    // 1 ms ~52%
     public static ListNode removeElements(ListNode head, int val) {
         if (head == null) return null;
         if (head.val == val) return removeElements(head.next, val);
@@ -39,6 +26,22 @@ class L203_RemoveLinkedListElements {
         }
         return head;
     }
+
+    public static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) { val = x; }
+        public String toString() {
+            ListNode current = this;
+            StringBuilder sb = new StringBuilder();
+            while (current != null) {
+                sb.append(current.val + " ");
+                current = current.next;
+            }
+            return sb.toString();
+        }
+    }
+
     public static void main(String[] args) {
         int listsize = 20;
         int maxval = 10;

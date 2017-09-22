@@ -4,7 +4,7 @@ package net.qiguang.leetcode;
  * Count the number of prime numbers less than a non-negative number, n.
  */
 public class L204_CountPrimes {
-    // 12ms ~97%
+    // 12 ms ~97%
     public int countPrimes(int n) {
         if (n < 3) return 0;
         boolean[] a = new boolean[n];
@@ -22,7 +22,7 @@ public class L204_CountPrimes {
         return count;
     }
 
-    // 19ms ~95%
+    // 19 ms ~95%
     public int countPrimes2(int n) {
         if (n < 3) return 0;
         boolean[] a = new boolean[n];

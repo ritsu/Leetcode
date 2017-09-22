@@ -8,6 +8,7 @@ package net.qiguang.leetcode;
  * Given 1->1->2->3->3, return 1->2->3.
  */
 public class L083_RemoveDuplicatesFromSortedList {
+    // 1 ms ~11%
     public static ListNode deleteDuplicates(ListNode head) {
         ListNode current = head;
         while (current != null) {
@@ -17,11 +18,13 @@ public class L083_RemoveDuplicatesFromSortedList {
         }
         return head;
     }
+
     public static class ListNode {
         int val;
         ListNode next;
         ListNode(int x) { val = x; }
     }
+
     public static void main(String[] args) {
         // Create sorted list with random duplicates
         ListNode a = new ListNode(0);

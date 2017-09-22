@@ -8,6 +8,7 @@ import java.util.Arrays;
  * The digits are stored such that the most significant digit is at the head of the list.
  */
 public class L066_PlusOne {
+    // 0 ms ~31%
     public static int[] plusOne(int[] digits) {
         for (int i = digits.length - 1; i >= 0; i--) {
             if (digits[i] < 9) {
@@ -22,6 +23,7 @@ public class L066_PlusOne {
         a[0] = 1;
         return a;
     }
+
     public static void main(String[] args) {
         int[][] digitss = {
                 {9, 9, 9, 9},

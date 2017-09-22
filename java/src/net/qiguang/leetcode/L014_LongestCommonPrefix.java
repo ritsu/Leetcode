@@ -6,15 +6,18 @@ import java.util.Arrays;
  * Write a function to find the longest common prefix string amongst an array of strings.
  */
 public class L014_LongestCommonPrefix {
+    // 10 ms ~73%
     public static String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) return "";
         Arrays.sort(strs);
-        int max = Math.min(strs[0].length(), strs[strs.length-1].length());
+        String a = strs[0];
+        String b = strs[strs.length - 1];
+        int max = Math.min(a.length(), b.length());
         int i = 0;
-        while (i < max && strs[0].charAt(i) == strs[strs.length-1].charAt(i)) {
+        while (i < max && a.charAt(i) == b.charAt(i)) {
             i++;
         }
-        return strs[0].substring(0, i);
+        return a.substring(0, i);
     }
     public static void main(String[] args) {
         String[] s0 = new String[0];

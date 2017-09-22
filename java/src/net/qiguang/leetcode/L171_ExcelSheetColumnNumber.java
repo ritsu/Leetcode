@@ -14,6 +14,7 @@ package net.qiguang.leetcode;
  *  AB -> 28
  */
 public class L171_ExcelSheetColumnNumber {
+    // 2 ms ~35%
     public static int titleToNumber(String s) {
         int num = 0;
         int p = 1;

@@ -15,6 +15,7 @@ import java.util.Arrays;
  * It doesn't matter what you leave beyond the new length.
  */
 public class L026_RemoveDuplicatesFromSortedArray {
+    // 13 ms ~64%
     public static int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
         int end = 0;

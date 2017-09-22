@@ -17,6 +17,7 @@ import java.util.HashMap;
  */
 
 public class L167_TwoSumInputArrayIsSorted {
+    // 1 ms ~40%
     public static int[] twoSum(int[] numbers, int target) {
         int left = 0;
         int right = numbers.length - 1;
@@ -27,6 +28,8 @@ public class L167_TwoSumInputArrayIsSorted {
         }
         return null;
     }
+
+    // 5 ms ~13%
     public static int[] twoSumHashMap(int[] numbers, int target) {
         HashMap<Integer, Integer> hm = new HashMap<>();
         for (int i = 0; i < numbers.length; i++) {
@@ -37,6 +40,8 @@ public class L167_TwoSumInputArrayIsSorted {
         }
         return null;
     }
+
+    // 5 ms ~13%
     public static int[] twoSumBinarySearch(int[] numbers, int target) {
         for (int i = 0; i < numbers.length; i++) {
             int key = target - numbers[i];
@@ -51,6 +56,7 @@ public class L167_TwoSumInputArrayIsSorted {
         }
         return null;
     }
+
     public static void main(String[] args) {
         int[] a = new int[100];
         for (int i = 0; i < 100; i++) {

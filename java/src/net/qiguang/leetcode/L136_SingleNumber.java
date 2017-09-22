@@ -9,12 +9,14 @@ import java.util.HashMap;
  * Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
  */
 public class L136_SingleNumber {
+    // 1 ms ~32%
     public int singleNumber(int[] nums) {
         int a = 0;
         for (int n : nums)
             a = a ^ n;
         return a;
     }
+
     public static void main(String[] args) {
         L136_SingleNumber lc = new L136_SingleNumber();
         int[][] numss = {{0},

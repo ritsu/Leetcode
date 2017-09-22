@@ -13,7 +13,7 @@ import java.util.Random;
  */
 
 public class L190_ReverseBits {
-    // you need treat n as an unsigned value
+    // 2 ms ~30%
     public static int reverseBits(int n) {
         int r = 0;
         for (int i = 0; i < 32; i++) {
@@ -24,8 +24,7 @@ public class L190_ReverseBits {
     }
     public static void main(String[] args) {
         Random r = new Random();
-        for (int i = 0; i < 10; i++) {
-            int n = i;
+        for (int n = 0; n < 10; n++) {
             System.out.println(Integer.toBinaryString(n));
             System.out.println(Integer.toBinaryString(reverseBits(n)));
             System.out.println(Integer.toBinaryString(reverseBits(reverseBits(n))));

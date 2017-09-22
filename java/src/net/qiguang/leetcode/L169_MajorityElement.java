@@ -11,6 +11,7 @@ import java.util.Random;
  * You may assume that the array is non-empty and the majority element always exist in the array.
  */
 public class L169_MajorityElement {
+    // 2 ms ~71%
     public static int majorityElement(int[] nums) {
         int num = nums[0];
         int count = 1;
@@ -25,6 +26,13 @@ public class L169_MajorityElement {
         return num;
     }
 
+    // 4 ms ~38%
+    public static int majorityElementSort(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
+
+    // 9 ms ~32%
     public static int majorityElementBits(int[] nums) {
         int[] bits = new int[32];
         for (int num : nums)
@@ -34,11 +42,6 @@ public class L169_MajorityElement {
         for (int i = 0; i < 32; i++)
             if (bits[i] > nums.length / 2) num |= 1 << i;
         return num;
-    }
-
-    public static int majorityElementSort(int[] nums) {
-        Arrays.sort(nums);
-        return nums[nums.length/2];
     }
 
     public static void main(String[] args) {

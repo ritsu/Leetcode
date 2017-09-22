@@ -9,14 +9,7 @@ import java.util.HashMap;
  * Can you solve it without using extra space?
  */
 public class L141_LinkedListCycle {
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
+    // 1 ms ~10%
     public static boolean hasCycle(ListNode head) {
         if (head == null) return false;
         ListNode step = head;
@@ -28,6 +21,16 @@ public class L141_LinkedListCycle {
         }
         return false;
     }
+
+    private static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(hasCycle(null));
 

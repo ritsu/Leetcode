@@ -14,16 +14,7 @@ import java.util.Random;
  * For the purpose of this problem, we define empty string as valid palindrome.
  */
 public class L125_ValidPalindrome {
-    // Easy solution (beats 12% of submissions)
-    public static boolean isPalindrome(String s) {
-        s = s.replaceAll("[^0-9A-Za-z]", "").toLowerCase();
-        if (s.length() <= 1) return true;
-        String left = s.substring(0, s.length()/2);
-        String right = s.substring(s.length() - s.length()/2, s.length());
-        right = new StringBuilder(right).reverse().toString();
-        return left.equals(right);
-    }
-    // Fast solution (beats 98.77% of submissions)
+    // 4 ms ~99%
     public static boolean isPalindromeFast(String s) {
         for (int left = 0, right = s.length() - 1; right > left; right--, left++) {
             char a = s.charAt(left);
@@ -44,6 +35,17 @@ public class L125_ValidPalindrome {
         }
         return true;
     }
+
+    // 36 ms ~8%
+    public static boolean isPalindrome(String s) {
+        s = s.replaceAll("[^0-9A-Za-z]", "").toLowerCase();
+        if (s.length() <= 1) return true;
+        String left = s.substring(0, s.length()/2);
+        String right = s.substring(s.length() - s.length()/2, s.length());
+        right = new StringBuilder(right).reverse().toString();
+        return left.equals(right);
+    }
+
     public static boolean isAlphaNumeric(char c) {
         if      (c  < '0') return false;
         else if (c <= '9') return true;

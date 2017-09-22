@@ -28,7 +28,7 @@ import java.util.ArrayDeque;
  * Output: "1211"
  */
 public class L038_CountAndSay {
-    // String method, slightly faster
+    // 3 ms ~94%
     public static String countAndSay(String s) {
         StringBuilder sb = new StringBuilder();
         char num = s.charAt(0);
@@ -52,7 +52,7 @@ public class L038_CountAndSay {
         return s;
     }
 
-    // Queue method, slightly slower
+    // 6 ms ~48%
     public static ArrayDeque<Integer> countAndSayQueue(ArrayDeque<Integer> r) {
         ArrayDeque<Integer> w = new ArrayDeque<Integer>();
         int num = r.poll();

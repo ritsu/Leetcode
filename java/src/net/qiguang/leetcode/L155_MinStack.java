@@ -21,6 +21,7 @@ import java.util.ArrayDeque;
  *   minStack.getMin();   --> Returns -2.
  */
 public class L155_MinStack {
+    // 98 ms ~96%
     public static class MinStack {
         ArrayDeque<Integer> d;
 

@@ -17,6 +17,7 @@ import java.util.HashSet;
  *   1^2 + 0^2 + 0^2 = 1
  */
 public class L202_HappyNumber {
+    // 2 ms ~80%
     public boolean isHappy(int n) {
         int slow = happySum(n);
         int fast = happySum(slow);

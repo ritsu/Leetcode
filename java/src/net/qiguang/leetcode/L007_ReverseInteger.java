@@ -11,6 +11,7 @@ package net.qiguang.leetcode;
  * Your function should return 0 when the reversed integer overflows.
  */
 public class L007_ReverseInteger {
+    // 38 ms ~77%
     public static int reverse(int x) {
         int r = 0;
         for (int d = x % 10; x != 0; x /= 10) {
@@ -20,6 +21,7 @@ public class L007_ReverseInteger {
         }
         return r;
     }
+
     public static void main(String[] args) {
         int[] nums = {123, -123, 1000, 1000000003, 1000000009, -2147483648};
         for (int i : nums) {

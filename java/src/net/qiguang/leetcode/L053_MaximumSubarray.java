@@ -14,7 +14,7 @@ import java.util.Random;
  * which is more subtle.
  */
 public class L053_MaximumSubarray {
-    // Solution
+    // 15 ms ~62%
     public static int maxSubArray(int[] nums) {
         int max = nums[0];
         int sum = 0;
@@ -26,7 +26,7 @@ public class L053_MaximumSubarray {
         return max;
     }
 
-    // Divide and conquer solution
+    // 18 ms ~13%, Divide and conquer
     public static int maxSubArrayDivide(int[] nums) {
         int[] m = maxSubArrayDivide(nums, 0, nums.length - 1);
         return Math.max(Math.max(m[0], m[1]), Math.max(m[2], m[3]));

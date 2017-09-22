@@ -6,6 +6,7 @@ package net.qiguang.leetcode;
  * Note: Your solution should be in logarithmic time complexity.
  */
 public class L172_FactorialTrailingZeroes {
+    // 1 ms ~24%
     public static long trailingZeroes(int n) {
         int zeroes = 0;
         while (n/5 > 0) {

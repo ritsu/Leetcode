@@ -5,20 +5,11 @@ package net.qiguang.leetcode;
  * Compute and return the square root of x.
  */
 public class L069_SqrtX {
+    // Track number of iterations
     public static int count_newton = 0;
     public static int count_binary = 0;
 
-    // Newton's method
-    public static int mySqrt(int x) {
-        long sqrt = x;
-        while (sqrt * sqrt > x) {
-            count_newton++;
-            sqrt = (sqrt + x / sqrt) / 2;
-        }
-        return (int) sqrt;
-    }
-
-    // Binary search
+    // 2 ms, ~62%, Binary search
     public static int mySqrtBinary(int x) {
         if (x == 0) return 0;
         if (x == 1) return 1;
@@ -35,6 +26,16 @@ public class L069_SqrtX {
         else {
             return mySqrtBinary(x, lo, mid - 1);
         }
+    }
+
+    // 3 ms ~13%, Newton's method
+    public static int mySqrt(int x) {
+        long sqrt = x;
+        while (sqrt * sqrt > x) {
+            count_newton++;
+            sqrt = (sqrt + x / sqrt) / 2;
+        }
+        return (int) sqrt;
     }
 
     public static void main(String[] args) {

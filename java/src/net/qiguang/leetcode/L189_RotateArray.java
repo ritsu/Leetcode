@@ -14,7 +14,7 @@ import java.util.Arrays;
  * Could you do it in-place with O(1) extra space?
  */
 public class L189_RotateArray {
-    // In-place with O(1) extra space
+    // 1 ms ~11%, In-place with O(1) extra space
     public static void rotate(int[] nums, int k) {
         k %= nums.length;
         if (k == 0) return;
@@ -38,7 +38,7 @@ public class L189_RotateArray {
         return gcd(b, a % b);
     }
 
-    // In-place with O(1) extra space
+    // 1 ms ~11%, In-place with O(1) extra space
     public static void rotateReverse(int[] nums, int k) {
         k %= nums.length;
         if (k == 0) return;
@@ -57,7 +57,7 @@ public class L189_RotateArray {
         }
     }
 
-    // O(N) extra space, depends on k
+    // 1 ms ~11%, O(N) extra space, depends on k
     public static void rotateSub(int[] nums, int k) {
         k %= nums.length;
         if (k == 0) return;
@@ -73,7 +73,7 @@ public class L189_RotateArray {
         }
     }
 
-    // O(N) extra space
+    // 1 ms ~11%, O(N) extra space
     public static void rotateCopy(int[] nums, int k) {
         k %= nums.length;
         int[] copy = new int[nums.length];

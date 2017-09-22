@@ -11,12 +11,14 @@ import java.util.Random;
  * transactions at the same time (ie, you must sell the stock before you buy again).
  */
 public class L122_BestTimeToBuyAndSellStockII {
+    // 1 ms ~54%
     public static int maxProfit(int[] prices) {
         int profit = 0;
         for (int i = 1; i < prices.length; i++)
             profit += Math.max(0, prices[i] - prices[i-1]);
         return profit;
     }
+
     public static void main(String[] args) {
         int[][] pricess = {{0,1,2,3,4,5,6},
                 {0,0,0,0,0,0,0},
@@ -30,7 +32,6 @@ public class L122_BestTimeToBuyAndSellStockII {
             System.out.println(Arrays.toString(prices));
             System.out.println(maxProfit(prices));
         }
-
         // Random prices
         for (int i = 0; i < 10; i++) {
             int[] a = new int[20];

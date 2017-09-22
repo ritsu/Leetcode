@@ -10,6 +10,7 @@ import java.util.HashMap;
  * Value	1	5	10	50	100	500	1,000
  */
 public class L013_RomanToInteger {
+    // 89 ms ~93%
     public static int romanToInt(String s) {
         int n = 0;
         for (int i = s.length() - 1; i >= 0; i--) {
@@ -23,6 +24,7 @@ public class L013_RomanToInteger {
         }
         return n;
     }
+
     public static void main(String[] args) {
         String[] rn = {"XXXIII"
                       ,"CXLVII"

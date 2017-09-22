@@ -6,6 +6,7 @@ package net.qiguang.leetcode;
  * Note: Given n will be a positive integer.
  */
 public class L070_ClimbingStairs {
+    // 0 ms ~9%
     // This is basically fibonacci because climbStairs(n) = climbStairs(n-1) + climbStairs(n-2)
     public static int climbStairs(int n) {
         int c1 = 0;
@@ -16,6 +17,7 @@ public class L070_ClimbingStairs {
         }
         return c2;
     }
+
     public static void main(String[] args) {
         for (int i = 1; i < 20; i++) {
             System.out.printf("%2d: %4d\n", i, climbStairs(i));

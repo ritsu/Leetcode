@@ -20,6 +20,7 @@ import java.util.Random;
  * In this case, no transaction is done, i.e. max profit = 0.
  */
 public class L121_BestTimeToBuyAndSellStock {
+    // 2 ms ~45%
     public static int maxProfit(int[] prices) {
         if (prices.length == 0) return 0;
         int min = prices[0];
@@ -30,6 +31,8 @@ public class L121_BestTimeToBuyAndSellStock {
         }
         return profit;
     }
+
+    // For reference
     public static int[] maxProfitIndices(int[] prices) {
         int min = 0;
         int buy = 0;
@@ -45,6 +48,7 @@ public class L121_BestTimeToBuyAndSellStock {
         }
         return new int[] {buy, sell};
     }
+
     public static void main(String[] args) {
         int[][] pricess = {{0,1,2,3,4,5,6},
                 {0,0,0,0,0,0,0},

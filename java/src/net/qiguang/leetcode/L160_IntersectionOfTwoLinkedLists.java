@@ -20,17 +20,9 @@ package net.qiguang.leetcode;
  * Your code should preferably run in O(n) time and use only O(1) memory.
  */
 public class L160_IntersectionOfTwoLinkedLists {
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
+    // 1 ms ~96%
     public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) return null;
-
         // Align
         ListNode curA = headA;
         ListNode curB = headB;
@@ -46,13 +38,21 @@ public class L160_IntersectionOfTwoLinkedLists {
             curA = curA.next;
             headA = headA.next;
         }
-
         // Find match
         while (headA != headB) {
             headA = headA.next;
             headB = headB.next;
         }
         return headA;
+    }
+
+    private static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
     }
 
     public static void main(String[] args) {

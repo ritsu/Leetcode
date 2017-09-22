@@ -14,6 +14,7 @@ import java.util.HashMap;
  *     return [0, 1].
  */
 public class L001_TwoSum {
+    // 7 ms ~92%
     public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; i++) {

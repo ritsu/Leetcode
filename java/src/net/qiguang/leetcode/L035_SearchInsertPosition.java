@@ -13,6 +13,7 @@ package net.qiguang.leetcode;
  * [1,3,5,6], 0 → 0
  */
 public class L035_SearchInsertPosition {
+    // 5 ms ~61%
     public static int searchInsert(int[] nums, int target) {
         return searchInsert(nums, target, 0, nums.length - 1);
     }
@@ -23,6 +24,7 @@ public class L035_SearchInsertPosition {
         else if (target < nums[mid]) return searchInsert(nums, target, lo, mid - 1);
         else                         return mid;                   // Return where it was found
     }
+
     public static void main(String[] args) {
         int[] nums = {1, 3, 5, 6};
         System.out.println(searchInsert(nums, 5));

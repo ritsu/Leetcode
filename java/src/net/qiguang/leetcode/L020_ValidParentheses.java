@@ -9,6 +9,7 @@ import java.util.Stack;
  * The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
  */
 public class L020_ValidParentheses {
+    // 9 ms ~73%
     public static boolean isValid(String s) {
         Stack<Character> st = new Stack<Character>();
         for (int i = 0; i < s.length(); i++) {

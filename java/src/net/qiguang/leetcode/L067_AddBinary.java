@@ -11,6 +11,7 @@ import java.util.Random;
  * Return "100".
  */
 public class L067_AddBinary {
+    // 5 ms ~27%
     public static String addBinary(String a, String b) {
         int max = Math.max(a.length(), b.length());
         int carry = 0;
@@ -25,6 +26,7 @@ public class L067_AddBinary {
         if (carry > 0) s.append(carry);
         return s.reverse().toString();
     }
+
     public static void main(String[] args) {
         for (int i = 0; i < 20; i++) {
             Random r = new Random();

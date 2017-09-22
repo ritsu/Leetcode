@@ -4,6 +4,7 @@ package net.qiguang.leetcode;
  * Determine whether an integer is a palindrome. Do this without extra space.
  */
 public class L009_PalindromeNumber {
+    // 182 ms ~96%
     public static boolean isPalindrome(int x) {
         if (x < 0) return false;
         int len = (int) Math.floor(Math.log10(x));
@@ -16,6 +17,7 @@ public class L009_PalindromeNumber {
         }
         return true;
     }
+
     public static void main(String[] args) {
         int[] nums = {0, 1, 10, 11, 123, 121, 1234, 1221, 12345, 12321, 123456, 123321, -12321, 2147447412, 1000021};
         for (int i : nums) {

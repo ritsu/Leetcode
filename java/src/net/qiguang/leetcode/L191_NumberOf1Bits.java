@@ -9,7 +9,7 @@ package net.qiguang.leetcode;
  */
 
 public class L191_NumberOf1Bits {
-    // you need to treat n as an unsigned value
+    // 2 ms ~8%
     public static int hammingWeight(int n) {
         int ones = 0;
         for (int i = 0; i < 32; i++) {

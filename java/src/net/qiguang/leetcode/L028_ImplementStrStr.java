@@ -6,6 +6,7 @@ package net.qiguang.leetcode;
  * Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack
  */
 public class L028_ImplementStrStr {
+    // 7 ms ~72%
     public static int strStr(String haystack, String needle) {
         int h = needle.hashCode();
         int max = haystack.length() - needle.length();
@@ -14,6 +15,12 @@ public class L028_ImplementStrStr {
         }
         return -1;
     }
+
+    // 6 ms ~88%, I mean, it's a solution.
+    public static int strStr2(String haystack, String needle) {
+        return haystack.indexOf(needle);
+    }
+
     public static void main(String[] args) {
         System.out.format("1234,   123, %2d\n", strStr("1234", "123"));
         System.out.format("1234,   123, %2d\n", "1234".indexOf("123"));

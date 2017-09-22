@@ -16,6 +16,7 @@ import java.util.Arrays;
  *
  */
 public class L027_RemoveElement {
+    // 9 ms ~53%
     public static int removeElement(int[] nums, int val) {
         if (nums.length == 0) return 0;
         int end = nums.length;
@@ -27,6 +28,7 @@ public class L027_RemoveElement {
         }
         return end;
     }
+
     public static void main(String[] args) {
         int[][] a = {{3, 2, 2, 3}
                     ,{3, 3}
